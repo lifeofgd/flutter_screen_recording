@@ -78,7 +78,8 @@ let screenSize = UIScreen.main.bounds
                 AVVideoWidthKey  : 640,
                 AVVideoHeightKey : 360,
                 AVVideoCompressionPropertiesKey : [
-                    AVVideoAverageBitRateKey : 30
+                    AVVideoAverageBitRateKey : 30,
+                    AVVideoQualityKey : 0.1
                 ]
             ]
                         
