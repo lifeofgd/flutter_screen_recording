@@ -4,7 +4,7 @@ PODS:
     - Flutter
   - open_file (0.0.1):
     - Flutter
-  - "permission_handler (4.2.0+hotfix.3)":
+  - "permission_handler (4.4.0+hotfix.4)":
     - Flutter
 
 DEPENDENCIES:
@@ -27,8 +27,8 @@ SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_screen_recording: f56d857cef9c6338f74909a15f60b3e5dc5ffb38
   open_file: 02eb5cb6b21264bd3a696876f5afbfb7ca4f4b7d
-  permission_handler: 40520ab8ad1bb78a282b832464e995ec87f77ec6
+  permission_handler: 8278954f2382902f63f00dd8828769c0bd6d511b
 
 PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

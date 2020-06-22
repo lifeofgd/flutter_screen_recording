@@ -153,10 +153,10 @@ class FlutterScreenRecordingPlugin(
                 mMediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
             }
             mMediaRecorder?.setOutputFile("${storePath}${videoName}.mp4")
-            mMediaRecorder?.setVideoSize(mDisplayWidth, mDisplayHeight)
+            mMediaRecorder?.setVideoSize(640,  360)
             mMediaRecorder?.setVideoEncoder(MediaRecorder.VideoEncoder.H264)
-            mMediaRecorder?.setVideoEncodingBitRate(5 * mDisplayWidth * mDisplayHeight)
-            mMediaRecorder?.setVideoFrameRate(60)
+            mMediaRecorder?.setVideoEncodingBitRate(5 * 640 * 360)
+            mMediaRecorder?.setVideoFrameRate(30)
 
 
             mMediaRecorder?.prepare()

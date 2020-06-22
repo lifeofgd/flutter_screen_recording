@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screen_recording/flutter_screen_recording.dart';
-import 'package:quiver/async.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:open_file/open_file.dart';
 
@@ -33,20 +32,20 @@ class _MyAppState extends State<MyApp> {
   }
 
   void startTimer() {
-    CountdownTimer countDownTimer = new CountdownTimer(
-      new Duration(seconds: 1000),
-      new Duration(seconds: 1),
-    );
-
-    var sub = countDownTimer.listen(null);
-    sub.onData((duration) {
-      setState(() => _time++);
-    });
-
-    sub.onDone(() {
-      print("Done");
-      sub.cancel();
-    });
+//    CountdownTimer countDownTimer = new CountdownTimer(
+//      new Duration(seconds: 1000),
+//      new Duration(seconds: 1),
+//    );
+//
+//    var sub = countDownTimer.listen(null);
+//    sub.onData((duration) {
+//      setState(() => _time++);
+//    });
+//
+//    sub.onDone(() {
+//      print("Done");
+//      sub.cancel();
+//    });
   }
 
   @override
