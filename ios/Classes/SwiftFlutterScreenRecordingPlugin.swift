@@ -67,7 +67,7 @@ let screenSize = UIScreen.main.bounds
         //Create the video settings
         if #available(iOS 11.0, *) {
             
-            var codec = AVVideoCodecJPEG;
+            var codec = AVVideoCodecH264;
             
             if(recordAudio){
                 codec = AVVideoCodecH264;
@@ -75,10 +75,11 @@ let screenSize = UIScreen.main.bounds
             
             let videoSettings: [String : Any] = [
                 AVVideoCodecKey  : codec,
-                AVVideoWidthKey  : 640,
-                AVVideoHeightKey : 360,
+                AVVideoWidthKey  : 1280,
+                AVVideoHeightKey : 720,
+                AVVideoAverageBitRateKey : 30 * 1280 * 720,
                 AVVideoCompressionPropertiesKey : [
-                    AVVideoAverageBitRateKey : 30,
+                    //AVVideoAverageBitRateKey : 1,
                     AVVideoQualityKey : 0.01,
                     AVVideoMaxKeyFrameIntervalKey : 30,
                 ]
