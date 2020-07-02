@@ -126,12 +126,12 @@ class FlutterScreenRecordingPlugin(
 
         if (metrics.widthPixels > metrics.heightPixels) {
             val rate = metrics.widthPixels / maxRes
-            mDisplayWidth = maxRes.toInt()
-            mDisplayHeight = (metrics.heightPixels / rate).toInt()
+            mDisplayWidth = (maxRes / 2).toInt()
+            mDisplayHeight = (metrics.heightPixels / rate / 2).toInt()
         } else {
             val rate = metrics.heightPixels / maxRes
-            mDisplayHeight = maxRes.toInt()
-            mDisplayWidth = (metrics.widthPixels / rate).toInt()
+            mDisplayHeight = (maxRes / 2).toInt()
+            mDisplayWidth = (metrics.widthPixels / rate / 2).toInt()
         }
 
         println("Scaled Density")
@@ -153,9 +153,9 @@ class FlutterScreenRecordingPlugin(
                 mMediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
             }
             mMediaRecorder?.setOutputFile("${storePath}${videoName}.mp4")
-            mMediaRecorder?.setVideoSize(mDisplayWidth / 2, mDisplayHeight / 2)
+            mMediaRecorder?.setVideoSize(mDisplayWidth, mDisplayHeight)
             mMediaRecorder?.setVideoEncoder(MediaRecorder.VideoEncoder.H264)
-            mMediaRecorder?.setVideoEncodingBitRate(1 * mDisplayWidth * mDisplayHeight / 4)
+            mMediaRecorder?.setVideoEncodingBitRate(1 * mDisplayWidth * mDisplayHeight)
             mMediaRecorder?.setVideoFrameRate(30)
 
 
